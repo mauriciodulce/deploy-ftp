@@ -1,0 +1,25 @@
+name: 'Deploy Git FTP'
+inputs:
+  url:
+    description: 'URL'
+    required: true
+  user:
+    description: 'FTP login name'
+    required: true
+  password:
+    description: 'FTP password'
+    required: true
+  syncroot:
+    description: 'Specifies a local directory to sync from as if it were the git project root path.'
+    required: false
+    default: '.'
+  options:
+    description: 'Additional options'
+    required: false
+    default: '--auto-init'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  color: 'black'
+  icon: 'upload-cloud'
