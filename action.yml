@@ -1,4 +1,5 @@
 name: 'Deploy Git FTP'
+description: ' GitHub actions to deploy sftp server.'
 inputs:
   url:
     description: 'URL'
